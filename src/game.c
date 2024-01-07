@@ -7,11 +7,8 @@
 #include "raylib.h"
 #include "game.h"
 
-int dbg = 1;
-
 gamestate_t * init_gamestate() {
     gamestate_t *state = malloc(sizeof(gamestate_t));
-    _DBGP(dbg, state)
 
     state->tick = 0LL;
     state->camera.position = (Vector3){ 0.0f, 10.0f, 10.0f };  // Camera position
