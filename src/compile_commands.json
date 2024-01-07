@@ -1,0 +1,26 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-I../../raylib/src",
+      "-framework",
+      "CoreVideo",
+      "-framework",
+      "IOKit",
+      "-framework",
+      "Cocoa",
+      "-framework",
+      "GLUT",
+      "-framework",
+      "OpenGL",
+      "../lib/libraylib.a",
+      "-o",
+      "mygame",
+      "mygame.c"
+    ],
+    "directory": "/Users/seletz/develop/osx/raylib/mygame/src",
+    "file": "/Users/seletz/develop/osx/raylib/mygame/src/mygame.c",
+    "output": "/Users/seletz/develop/osx/raylib/mygame/src/mygame"
+  }
+]
