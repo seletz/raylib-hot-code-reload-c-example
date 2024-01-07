@@ -1,3 +1,4 @@
 mygame
 lib/libraylib.a
 .cache
+*.so

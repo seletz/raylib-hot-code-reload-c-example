@@ -1,15 +1,17 @@
 
 
-all: mygame
+all: mygame game.so
 
 CC=clang
-LDFLAGS=-framework CoreVideo -framework IOKit -framework Cocoa -framework GLUT -framework OpenGL
-CFLAGS=-I../../raylib/src
-LIBS=../lib/libraylib.a
+LDFLAGS=-framework CoreVideo -framework IOKit -framework Cocoa -framework GLUT -framework OpenGL $(shell pkg-config --libs raylib)
+CFLAGS=$(shell pkg-config --cflags raylib)
 
 
-mygame: mygame.c
-	$(CC) $(CFLAGS) $(LDFLAGS) $(LIBS) $^ -o $@
+mygame: mygame.c reload.c
+	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
+
+game.so: game.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -fPIC -shared $^ -o $@
 
 clean:
 	rm mygame
