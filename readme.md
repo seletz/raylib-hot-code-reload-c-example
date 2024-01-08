@@ -1,5 +1,7 @@
 # Hot Code Reloading in C
 
+More details about this code can be found in my [blog post](https://seletz.github.io/posts/hotreload-gamecode-in-c).
+
 This is some example code which demos hot-code reloading
 using `dlopen(3)` and `dlsym(3)` of game code while the game
 is running.
