@@ -34,7 +34,7 @@ int do_reload() {
         {"update_frame", (void **)&update_frame},
         {0}
     };
-    return reload("game.so", symtab);
+    return reload("libgamecode.so", symtab);
 }
 
 int main(void)

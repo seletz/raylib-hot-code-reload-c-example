@@ -10,7 +10,7 @@ tested on Mac OS.
 The "game" part is not really there -- this is just a demo
 on hot-reloading at the moment.
 
-The graphics part is done using Raylib.
+The graphics part is done using [Raylib](https://www.raylib.com).
 
 ## Why?
 
@@ -57,3 +57,39 @@ calls `reload()` with the correct parameters to reload `game.so`.
 I got inspired to try this by this [blog post](https://medium.com/@TheElkantor/how-to-add-hot-reload-to-your-raylib-proj-in-c-698caa33eb74), which does something similar but for Windows.
 
 I also found [this video](https://youtu.be/Y57ruDOwH1g) by [tsoding](https://www.youtube.com/tsoding) helpful.
+
+## building and running
+
+This project uses `cmake`.  `cmake` will fetch version `5.0` of
+[raylib](https://www.raylib.com) and build it:
+
+``` bash
+$ brew install cmake
+$ mkdir build
+$ cd build
+$ cmake ..
+$ cmake -build .
+```
+
+This should generate the `mygame` main executable and the `libgamecode.so` shared library in the `build` directory.
+
+To run the demo:
+
+``` bash
+$ ./mygame
+```
+
+## Hot Reloading
+
+To test hot reloading, edit `src/game.c` while the game
+is running -- e.g change the cube color.
+
+Then rebuild:
+
+``` bash
+$ cd build
+$ make
+```
+
+Now hit `r` with the game window active.  The color of the cube
+should change.
