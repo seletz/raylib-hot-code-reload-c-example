@@ -12,6 +12,8 @@ on hot-reloading at the moment.
 
 The graphics part is done using [Raylib](https://www.raylib.com).
 
+![](assets/screenshot.png)
+
 [![build](https://github.com/seletz/raylib-hot-code-reload-c-example/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/seletz/raylib-hot-code-reload-c-example/actions/workflows/cmake-single-platform.yml)
 
 ## Why?
@@ -23,6 +25,7 @@ Additionally, when testing / debugging a game, we often need
 to reload the **logic** of the game and test it with a given
 game state.  Often enough we can't fully serialise and reload
 game state from/to disk.
+
 
 ## How It Works
 

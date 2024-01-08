@@ -15,3 +15,4 @@ build
 **/CTestTestfile.cmake
 **/Makefile
 **/CMakeScripts
+/.DS_Store
