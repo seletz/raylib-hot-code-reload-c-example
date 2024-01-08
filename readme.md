@@ -12,6 +12,8 @@ on hot-reloading at the moment.
 
 The graphics part is done using [Raylib](https://www.raylib.com).
 
+[![build](https://github.com/seletz/raylib-hot-code-reload-c-example/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/seletz/raylib-hot-code-reload-c-example/actions/workflows/cmake-single-platform.yml)
+
 ## Why?
 
 When doing graphics programming for games or "recreational"
